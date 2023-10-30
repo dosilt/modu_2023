@@ -1,5 +1,3 @@
-wandb disabled
-
 CUDA_VISIBLE_DEVICES=0 python main.py --prompt_type 2 --batch_size 2 \
  --accumulation 8 --warmup_ratio 0.05 --learning_rate 2.5e-4 --epochs 2 --experiment_name results/exp1
 
