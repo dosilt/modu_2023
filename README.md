@@ -12,6 +12,7 @@ conda activate <env_name>
 ## 라이브러리 설치
 ```
 pip install -r requirement.txt
+
 git clone https://github.com/huggingface/peft.git
 cd peft
 python setup.py install
