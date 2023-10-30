@@ -2,8 +2,10 @@
 모두의 말뭉치 이야기 완성 과제
 
 팀명 : 엘리
-
+CUDA-12.0
 ## 환경 셋팅
+
+
 ```
 conda create -n <env_name> python=3.9.18
 conda activate <env_name>
