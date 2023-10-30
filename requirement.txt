@@ -1,4 +1,4 @@
 transformers==4.34.1
-torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 termcolor
-urllib3
+--extra-index-url https://download.pytorch.org/whl/cu118
+torch torchvision torchaudio 
