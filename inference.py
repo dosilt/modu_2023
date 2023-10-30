@@ -59,7 +59,7 @@ if __name__ == '__main__':
     argument.add_argument('--valid_path', default='NIKL_SC_2023/nikluge-sc-2023-dev.jsonl')
     argument.add_argument('--test_path', default='NIKL_SC_2023/nikluge-sc-2023-test.jsonl')
     
-    argument.add_argument('--batch_size', default=4, type=int)
+    argument.add_argument('--batch_size', default=1, type=int)
     argument.add_argument('--output_path', default='inference/exp1')
     argument.add_argument('--save_name', default='exp1_inference.jsonl')
     argument.add_argument('--num_beams', default=3, type=int)
