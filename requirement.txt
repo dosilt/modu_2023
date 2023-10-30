@@ -1,7 +1,7 @@
 transformers==4.34.1
 termcolor
+tensorboard
 --extra-index-url https://download.pytorch.org/whl/cu118
 torch
 torchvision
 torchaudio 
-tensorboard
