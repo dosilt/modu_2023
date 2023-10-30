@@ -1,11 +1,12 @@
-### modu_2023
+# modu_2023
 모두의 말뭉치 이야기 완성 과제
 
 팀명 : 엘리
 
 ## 환경 셋팅
 ```
-안녕하세요
+conda create -n <env_name> python=3.9.18
+conda activate <env_name>
 ```
 
 
