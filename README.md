@@ -25,6 +25,3 @@ cd peft
 python setup.py install
 cd ..
 ```
-
-
-현재 비공개 repository로 설정해 놨으며, 정성 평가 이후 공개로 전환할 예정
