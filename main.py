@@ -25,7 +25,7 @@ def main(args):
     
     ## 학습 데이터 불러오기 ##
     train_list, _, _ = load_data(args)
-    train_set = CreateDataset(args, train_list, tokenizer, 'train')
+    train_set = CreateDataset(args, train_list, tokenizer)
     collate_fn = CollateFn(tokenizer)
     
     ## 모델 불러오기 torch_dtype을 선언 안하면 메모리 초과됨 ##
