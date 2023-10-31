@@ -20,7 +20,7 @@ def inference(args):
     
     tokenizer = AutoTokenizer.from_pretrained(args.model_name)
           
-    _, _, test_list = load_data(args, 'inference')
+    _, _, test_list = load_data(args)
     test_set = CreateDataset(args, test_list, tokenizer, 'test')
     collate_fn = CollateFn(tokenizer)
     
