@@ -25,7 +25,7 @@ def jsonldump(j_list, fname):
             
             
 ## 데이터 불러오는 부분 ##
-def load_data(args, type_='train'):
+def load_data(args):
     train_json = jsonlload(args.train_path)
     valid_json = jsonlload(args.valid_path)
     test_json = jsonlload(args.test_path)
@@ -33,17 +33,17 @@ def load_data(args, type_='train'):
     train_list = json2list(train_json)
     valid_list = json2list(valid_json)
     test_list = json2list(test_json)
-    if type_ == 'train' and args.add_valid:
+    if args.add_valid:
         return train_list+valid_list, valid_list, test_list
     return train_list, valid_list, test_list
 
 
 ## Dataset Class 만들기 ##
 class CreateDataset(Dataset):
-    def __init__(self, args, data, tokenizer, type_='train'):
+    def __init__(self, args, data, tokenizer):
         super().__init__()
         self.prompt_type = args.prompt_type
-        self.data, self.type_ = data, type_
+        self.data = data
         self.tokenizer = tokenizer
         
     def __len__(self):
@@ -62,10 +62,7 @@ class CreateDataset(Dataset):
         elif self.prompt_type == 4:
             prompt = f'sentence1:{s1}\nsentence2:\nsentence3:{s3}\nRead the given sentences 1 and 3, and create an appropriate sentence 2 between sentences 1 and 3 so that the context continues naturally.'
             
-        if self.type_ == 'test':
-            label = ''
-        else:
-            label = f'{s2}{self.tokenizer.eos_token}'
+        label = f'{s2}{self.tokenizer.eos_token}'
         return prompt, label
         
         
