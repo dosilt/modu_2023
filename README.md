@@ -3,12 +3,11 @@
 
 팀명 : 엘리
 
-CUDA-12.0
+데이터 셋은 해당 github repository에 포함되어 있지 않습니다.
 
 ## 환경 셋팅
-
-
 ```
+CUDA-12.0
 conda create -n <env_name> python=3.9.18
 conda activate <env_name>
 ```
