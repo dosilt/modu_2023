@@ -111,7 +111,7 @@ if __name__ == '__main__':
                                                              'inference/exp4/exp4_inference.jsonl'])
     
     argument.add_argument('--test_path', default='NIKL_SC_2023/nikluge-sc-2023-test.jsonl', help='test data 경로')
-    argument.add_arugment('--output_path', default='ensemble')
+    argument.add_argument('--output_path', default='ensemble')
     argument.add_argument('--save_name', default='ensemble_v1.jsonl')
     args = argument.parse_args()
     
