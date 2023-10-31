@@ -25,3 +25,10 @@ cd peft
 python setup.py install
 cd ..
 ```
+
+## Quick Start
+```
+sh train_run.sh
+sh inference_run.sh
+sh ensemble_run.sh
+```
