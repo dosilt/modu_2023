@@ -53,6 +53,9 @@ def input_sentences(samplelist, idx):
 
 
 def ensemble_main(args):
+    if not os.path.isdir(args.output_path):
+        os.makedirs(args.output_path)
+        
     ## 앙상블할 데이터 불러오는 부분
     samplelist = []
     for path in args.exp_paths:
@@ -94,7 +97,7 @@ def ensemble_main(args):
     for idx, oup in enumerate(decoded):
         j_list[idx]["output"] = oup
 
-    jsonldump(j_list, f'{args.save_name}')
+    jsonldump(j_list, f'{args.output_path}/{args.save_name}')
 
 if __name__ == '__main__':
     import argparse
@@ -108,6 +111,7 @@ if __name__ == '__main__':
                                                              'inference/exp4/exp4_inference.jsonl'])
     
     argument.add_argument('--test_path', default='NIKL_SC_2023/nikluge-sc-2023-test.jsonl', help='test data 경로')
+    argument.add_arugment('--output_path', default='ensemble')
     argument.add_argument('--save_name', default='ensemble_v1.jsonl')
     args = argument.parse_args()
     
