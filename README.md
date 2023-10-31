@@ -31,3 +31,5 @@ sh train_run.sh
 sh inference_run.sh
 sh ensemble_run.sh
 ```
+현재 bash 파일에는 최종 제출본의 구현 방법이 들어가 있습니다.
+train_run.sh를 수정없이 실행시키면 폴더가 이미 있다고 skip 되는 것이 정상입니다.
