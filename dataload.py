@@ -25,7 +25,7 @@ def jsonldump(j_list, fname):
             
             
 ## 데이터 불러오는 부분 ##
-def load_data(args):
+def load_data(args, types='train'):
     train_json = jsonlload(args.train_path)
     valid_json = jsonlload(args.valid_path)
     test_json = jsonlload(args.test_path)
@@ -33,7 +33,7 @@ def load_data(args):
     train_list = json2list(train_json)
     valid_list = json2list(valid_json)
     test_list = json2list(test_json)
-    if args.add_valid:
+    if types=='train' and args.add_valid:
         return train_list+valid_list, valid_list, test_list
     return train_list, valid_list, test_list
 
