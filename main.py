@@ -24,7 +24,7 @@ def main(args):
         tokenizer.pad_token = tokenizer.eos_token
     
     ## 학습 데이터 불러오기 ##
-    train_list, _, _ = load_data(args, 'train')
+    train_list, _, _ = load_data(args)
     train_set = CreateDataset(args, train_list, tokenizer, 'train')
     collate_fn = CollateFn(tokenizer)
     
